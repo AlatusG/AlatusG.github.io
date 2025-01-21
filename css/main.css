@@ -69,6 +69,7 @@
   justify-content: center;
   flex-flow: row nowrap;
   padding: 15pt 35pt;
+  text-decoration: none;
 }
 
 .soc_nav > ul > li:hover {
@@ -77,6 +78,11 @@
   border-radius: 100pt;
   z-index: 99;
   position: relative;
+}
+
+.soc_nav > ul > li > a:hover {
+  color: black;
+  font-weight: bolder;
 }
 
 .soc_nav > ul > li:hover::before {
