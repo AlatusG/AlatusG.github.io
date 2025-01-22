@@ -3,7 +3,8 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  /*outline: 1px solid pink;
+  /*
+  outline: 1px solid pink;
 	*/
 }
 
@@ -29,7 +30,9 @@
 }
 
 .nav_row > ul > li {
+  /*
   width: 100%;
+  */
 }
 
 .site_nav {
@@ -42,10 +45,171 @@
 }
 
 .site_nav > ul {
-  background-color: #2f2f2f;
+  background-color: black;
   border-radius: 100pt;
-  padding: 10pt 35pt;
-  gap: 2rem;
+  padding: 2pt 0;
+  outline: 3px solid black;
+  border: 5px solid #2f2f2f;
+  /**/
+  gap: 1rem;
+
+  position: relative;
+}
+
+.site_nav > ul > li {
+  /*
+  background-color: #2f2f2f; 
+  */
+  margin: 4pt 0;
+
+  position: relative;
+}
+
+.site_nav > ul > li > a {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  text-decoration: none;
+  padding: 5pt 15pt;
+
+  z-index: 99;
+  position: relative;
+}
+
+.site_nav > ul > li:is(:first-child, :last-child) > a {
+  color: #161616;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.site_nav > ul > li:is(:first-child)::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 10%;
+  width: 50%;
+  height: 120%;
+  background-color: #2f2f2f;
+  outline: 10px solid #2f2f2f;
+  outline-offset: -2px;
+  border-radius: 200pt 50pt 50pt 200pt;
+  z-index: 1;
+}
+
+.site_nav > ul > li:is(:first-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20%;
+  width: 40%;
+  height: 100%;
+  border-radius: 0pt 0pt 0pt 200pt;
+  background-color: #2f2f2f;
+  outline: 10px solid #2f2f2f;
+
+  transform: skew(-30deg);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.site_nav > ul > li:is(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 40%;
+  height: 100%;
+  border-radius: 0pt 200pt 0pt 0pt;
+  background-color: #2f2f2f;
+  outline: 10px solid #2f2f2f;
+
+  transform: skew(-30deg);
+  outline-offset: -2px;
+  z-index: 1;
+}
+
+.site_nav > ul > li:is(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  width: 50%;
+  height: 120%;
+  background-color: #2f2f2f;
+  outline: 10px solid #2f2f2f;
+  outline-offset: -2px;
+  border-radius: 50pt 200pt 200pt 50pt;
+  z-index: 1;
+}
+
+.site_nav > ul > li:not(:first-child, :last-child)::before,
+.site_nav > ul > li:not(:first-child, :last-child)::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  width: 80%;
+  height: 70%;
+  background-color: #2f2f2f;
+  outline: 10px solid #2f2f2f;
+  outline-offset: -2px;
+  transform: skew(-30deg);
+  z-index: 1;
+}
+
+.site_nav > ul > li:not(:first-child, :last-child)::before {
+  right: 15%;
+  border-radius: 50pt 200pt 200pt 50pt;
+}
+
+.site_nav > ul > li:not(:first-child, :last-child)::after {
+  left: 15%;
+  border-radius: 200pt 50pt 50pt 200pt;
+}
+
+.site_nav > ul > li:hover {
+  /*
+  background-color: gold;
+  */
+  outline-offset: -2px;
+  z-index: 99;
+  position: relative;
+}
+
+.site_nav > ul > li:not(:first-child, :last-child) > a:hover {
+  color: black;
+  /*
+  font-weight: bolder;
+  */
+}
+
+.site_nav > ul > li:not(:first-child, :last-child):hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 15%;
+  width: 90%;
+  height: 100%;
+  background-color: gold;
+  outline: 10px solid gold;
+  outline-offset: -2px;
+  border-radius: 50pt 200pt 200pt 50pt;
+  transform: skew(-30deg);
+  z-index: 1;
+}
+
+.site_nav > ul > li:not(:first-child, :last-child):hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 90%;
+  height: 100%;
+  background-color: gold;
+  outline: 10px solid gold;
+  outline-offset: -2px;
+  border-radius: 200pt 50pt 50pt 200pt;
+  transform: skew(-30deg);
+  z-index: -1;
 }
 
 .soc_nav {
@@ -121,7 +285,7 @@
   top: 0;
   left: 0;
   width: 50%;
-  height: 100%;
+  height: 99%;
   background-color: gold;
   outline: 10px solid gold;
   outline-offset: -2px;
@@ -166,7 +330,7 @@
   top: 0;
   left: 50%;
   width: 50%;
-  height: 100%;
+  height: 99%;
   background-color: gold;
   outline: 10px solid gold;
   outline-offset: -2px;
@@ -203,8 +367,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: flex-start;
-  width: 35vw;
-  min-width: 300pt;
+  width: 350pt;
   padding: 2vh 2vw;
   background-color: #2f2f2f;
   border-radius: 10pt;
@@ -216,6 +379,6 @@ footer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  background-color: #2f2f2f;
+  background-color: black;
   line-height: 50pt;
 }
