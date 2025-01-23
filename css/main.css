@@ -2,10 +2,10 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
   /*
   outline: 1px solid pink;
 	*/
+  color: white;
 }
 
 .home_body {
@@ -86,9 +86,9 @@
   content: "";
   position: absolute;
   top: -10%;
-  left: 10%;
-  width: 50%;
-  height: 120%;
+  left: 15%;
+  width: 30%;
+  height: 110%;
   background-color: #2f2f2f;
   outline: 10px solid #2f2f2f;
   outline-offset: -2px;
@@ -132,9 +132,9 @@
   content: "";
   position: absolute;
   top: -10%;
-  right: 10%;
-  width: 50%;
-  height: 120%;
+  right: 15%;
+  width: 40%;
+  height: 110%;
   background-color: #2f2f2f;
   outline: 10px solid #2f2f2f;
   outline-offset: -2px;
@@ -345,7 +345,7 @@
   justify-content: center;
   align-items: center;
   gap: 0rem;
-  height: 75vh;
+  height: 55vh;
   width: 100%;
 }
 
@@ -358,19 +358,69 @@
 }
 
 .profile_img {
-  width: 50vw;
   align-self: flex-end;
 }
 
 .profile_info {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: flex-start;
   width: 350pt;
-  padding: 2vh 2vw;
   background-color: #2f2f2f;
-  border-radius: 10pt;
+  border-radius: 15pt;
+
+  gap: 1rem;
+
+  outline: 3px solid black;
+  border: 5px solid #2f2f2f;
+
+  padding: 10pt 6pt;
+}
+
+.dev_info {
+  padding: 0pt 10pt;
+
+  color: #161616;
+  font-weight: bolder;
+}
+
+.name_container {
+  background-color: #060606;
+
+  display: flex;
+  flex-flow: column nowrap;
+  height: 10vh;
+  border-radius: 15pt;
+
+  padding: 10pt 10pt;
+}
+
+.dev_nickname {
+  margin-top: auto;
+}
+
+.dev_stats {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 0.5rem 0rem;
+}
+
+.dev_stats > * {
+  background-color: #060606;
+  width: 150pt;
+  border-radius: 15pt;
+
+  padding: 3pt 10pt;
+}
+
+.to_projects_btn {
+  background-color: #2f2f2f;
+
+  padding: 1pt 6pt;
+  border-radius: 15pt;
+  outline: 3px solid black;
+  border: 5px solid #2f2f2f;
+  text-align: end;
 }
 
 footer {
