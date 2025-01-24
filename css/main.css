@@ -41,7 +41,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin-top: 80pt;
+  margin-top: 5vh;
 }
 
 .site_nav > ul {
@@ -102,7 +102,7 @@
   top: 0;
   right: 20%;
   width: 40%;
-  height: 100%;
+  height: 110%;
   border-radius: 0pt 0pt 0pt 200pt;
   background-color: #2f2f2f;
   outline: 10px solid #2f2f2f;
@@ -118,7 +118,7 @@
   top: 0;
   left: 20%;
   width: 40%;
-  height: 100%;
+  height: 110%;
   border-radius: 0pt 200pt 0pt 0pt;
   background-color: #2f2f2f;
   outline: 10px solid #2f2f2f;
@@ -345,7 +345,7 @@
   justify-content: center;
   align-items: center;
   gap: 0rem;
-  height: 55vh;
+  height: 75vh;
   width: 100%;
 }
 
@@ -400,14 +400,13 @@
 
 .dev_stats {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: space-between;
   gap: 0.5rem 0rem;
 }
 
 .dev_stats > * {
   background-color: #060606;
-  width: 150pt;
   border-radius: 15pt;
 
   padding: 3pt 10pt;
