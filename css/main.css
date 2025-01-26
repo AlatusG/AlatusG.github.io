@@ -391,7 +391,7 @@
   height: 10vh;
   border-radius: 15pt;
 
-  padding: 10pt 10pt;
+  padding: 10pt;
 }
 
 .dev_nickname {
@@ -409,17 +409,20 @@
   background-color: #060606;
   border-radius: 15pt;
 
-  padding: 3pt 10pt;
+  padding: 10pt;
 }
 
 .to_projects_btn {
   background-color: #2f2f2f;
-
   padding: 1pt 6pt;
   border-radius: 15pt;
   outline: 3px solid black;
   border: 5px solid #2f2f2f;
+
   text-align: end;
+  text-decoration: none;
+  color: white;
+  font-weight: bolder;
 }
 
 footer {
