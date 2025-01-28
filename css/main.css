@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
   /*
   outline: 1px solid pink;
 	*/
@@ -65,7 +66,7 @@
   position: relative;
 }
 
-.site_nav > ul > li > a {
+.site_nav > ul > li > button {
   display: flex;
   justify-content: center;
   flex-flow: row nowrap;
@@ -74,9 +75,13 @@
 
   z-index: 99;
   position: relative;
+
+  background-color: transparent;
+  border: none;
+  cursor: help;
 }
 
-.site_nav > ul > li:is(:first-child, :last-child) > a {
+.site_nav > ul > li:is(:first-child, :last-child) > button {
   color: #161616;
   font-weight: bolder;
   font-size: larger;
@@ -175,7 +180,7 @@
   position: relative;
 }
 
-.site_nav > ul > li:not(:first-child, :last-child) > a:hover {
+.site_nav > ul > li:not(:first-child, :last-child) > button:hover {
   color: black;
   /*
   font-weight: bolder;
