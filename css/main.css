@@ -20,7 +20,12 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: 720px;
+
+  /* remove later...
+  overflow: hidden;
+  */
 }
 
 /* SITE NAVIGATION STYLES START */
@@ -174,7 +179,7 @@
 /* SOCIALS NAVIGATION STYLES START */
 .soc_nav {
   width: 50vw;
-  height: 25vh;
+  height: 15vh;
   align-self: flex-end;
 
   display: flex;
@@ -197,7 +202,7 @@
   flex-flow: row nowrap;
   padding: 10pt 35pt;
   text-decoration: none;
-  height: 25pt;
+  height: 20pt;
 }
 
 .soc_nav > ul > li:hover {
@@ -284,7 +289,7 @@
 .main_content {
   display: none;
   width: 100vw;
-  height: 55vh;
+  height: 65vh;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
