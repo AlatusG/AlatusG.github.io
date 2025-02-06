@@ -157,11 +157,13 @@
   z-index: -1;
 }
 
-.site_nav > ul > li:not(:first-child, :last-child) > button:hover {
+.site_nav > ul > li:not(:first-child, :last-child) > button:hover,
+.site_nav > ul > li:not(:first-child, :last-child) > button.active {
   color: black;
 }
 
-.site_nav > ul > li:not(:first-child, :last-child) > button:hover::before {
+.site_nav > ul > li:not(:first-child, :last-child) > button:hover::before,
+.site_nav > ul > li:not(:first-child, :last-child) > button.active::before {
   background-color: gold;
 
   outline: 4pt solid gold;
@@ -280,9 +282,9 @@
 
 /* SITE CONTENT STYLES START */
 .main_content {
+  display: none;
   width: 100vw;
   height: 55vh;
-  display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
@@ -308,6 +310,18 @@
   border: 5px solid #2f2f2f;
 
   padding: 10pt 6pt;
+
+  animation: slideIn 0.25s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }
 
 .dev_info {

@@ -14,15 +14,37 @@
     <nav class="nav_row site_nav">
       <ul>
         <li><button><</button></li>
-        <li><button>About</button></li>
-        <li><button>Skills</button></li>
-        <li><button>Projects</button></li>
-        <li><button>Resume</button></li>
+
+        <li>
+          <button
+            id="defaultTab"
+            class="tabbed_btn"
+            onclick="tabbedNav(event, 'About')"
+          >
+            About
+          </button>
+        </li>
+        <li>
+          <button class="tabbed_btn" onclick="tabbedNav(event, 'Skills')">
+            Skills
+          </button>
+        </li>
+        <li>
+          <button class="tabbed_btn" onclick="tabbedNav(event, 'Projects')">
+            Projects
+          </button>
+        </li>
+        <li>
+          <button class="tabbed_btn" onclick="tabbedNav(event, 'Resume')">
+            Resume
+          </button>
+        </li>
+
         <li><button>></button></li>
       </ul>
     </nav>
 
-    <section class="main_content">
+    <section id="About" class="main_content">
       <aside class="profile_img">Image</aside>
 
       <aside class="profile_info_container">
@@ -60,7 +82,9 @@
       </aside>
     </section>
 
-    <section class="main_content hidden"></section>
+    <section id="Skills" class="main_content">Skills</section>
+    <section id="Projects" class="main_content">Projects</section>
+    <section id="Resume" class="main_content">Resume</section>
 
     <nav class="nav_row soc_nav">
       <ul>
@@ -71,5 +95,9 @@
     </nav>
 
     <footer>Powered purely by HTML, CSS and, Javascript.</footer>
+
+    <script>
+      document.getElementById("defaultTab").click();
+    </script>
   </body>
 </html>
