@@ -11,32 +11,34 @@
   </head>
 
   <body class="home_body">
+    <section class="scrollCont"></section>
+
     <nav class="site_nav">
       <ul>
         <li><button><</button></li>
 
         <li>
-          <button
-            id="defaultTab"
-            class="tabbed_btn"
-            onclick="tabbedNav(event, 'About')"
-          >
-            About
+          <button class="tabbed_btn" onclick="tabbedNav(event, 'About')">
+            Nav Btn
           </button>
         </li>
         <li>
-          <button class="tabbed_btn" onclick="tabbedNav(event, 'Skills')">
-            Skills
+          <button
+            id="defaultTab"
+            class="tabbed_btn"
+            onclick="tabbedNav(event, 'Skills')"
+          >
+            Nav Btn
           </button>
         </li>
         <li>
           <button class="tabbed_btn" onclick="tabbedNav(event, 'Projects')">
-            Projects
+            Nav Btn
           </button>
         </li>
         <li>
           <button class="tabbed_btn" onclick="tabbedNav(event, 'Resume')">
-            Resume
+            Nav Btn
           </button>
         </li>
 
@@ -49,35 +51,23 @@
 
       <aside class="profile_info_container">
         <section class="profile_info">
-          <div class="dev_info">Dev Info</div>
+          <div class="dev_info">Agent Info</div>
 
           <section class="name_container">
-            <div class="faction_name">Full-Stack Web Developer</div>
-            <h1 class="dev_name">Charles Cruz</h1>
-            <h2 class="dev_nickname">AlatusG</h2>
+            <div class="faction_name">Role</div>
+            <h1 class="dev_name">Fullname</h1>
+            <h2 class="dev_nickname">Nickname</h2>
           </section>
 
           <section class="dev_stats">
-            <aside>
-              Hi! I'm Charles. I'm a full-stack developer with a passion for
-              creating eye-catching web applications. I have experience with
-              HTML, CSS, JavaScript, and, Python and C#. I graduated from the
-              Queensland University of Technology.
-            </aside>
+            <aside>Bio 1</aside>
 
-            <aside>
-              Besides web dev and programming, I have picked up on 3D modelling
-              and printing to create physical solutions to everyday problems.
-              When I’m not working on web apps, you can find me experimenting
-              with 3D modeling, or diving into livestreaming.
-            </aside>
+            <aside>Bio 2</aside>
 
-            <aside>
-              Come check out the projects I've worked on with the button below.
-            </aside>
+            <aside>Bio 3</aside>
           </section>
 
-          <button class="to_projects_btn">View Projects</button>
+          <button class="to_projects_btn">View Btn</button>
         </section>
       </aside>
     </section>
@@ -86,7 +76,15 @@
       <aside class="profile_img">Image</aside>
 
       <aside class="profile_info_container">
-        <section class="profile_info"></section>
+        <section class="skills_info">
+          <div class="skillImg">Skill 1</div>
+          <div class="skillImg">Skill 2</div>
+          <div class="skillImg">Skill 3</div>
+          <div class="skillImg">Skill 4</div>
+          <div class="skillImg">Skill 5</div>
+          <div class="skillImg">Skill 6</div>
+          <div class="skillImg">Skill 7</div>
+        </section>
       </aside>
     </section>
 
@@ -95,15 +93,16 @@
 
     <nav class="soc_nav">
       <ul>
-        <li><a href="/linkedin">LinkedIn</a></li>
-        <li><a href="/github">GitHub</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/linkedin">Link Btn</a></li>
+        <li><a href="/github">Link Btn</a></li>
+        <li><a href="/contact">Link Btn</a></li>
       </ul>
     </nav>
 
     <footer>Powered purely by HTML, CSS and, Javascript.</footer>
 
     <script>
+      devImgBG(6);
       document.getElementById("defaultTab").click();
     </script>
   </body>

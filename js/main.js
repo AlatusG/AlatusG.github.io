@@ -17,3 +17,26 @@ function tabbedNav(event, tabName) {
   document.getElementById(tabName).style.display = "flex";
   event.currentTarget.className += " active";
 }
+
+function devImgBG(count) {
+  // append scrollBG divs
+  for (let i = 0; i < count; i++) {
+    const para = document.createElement("div");
+
+    para.className = "scrollBG";
+
+    if (i % 2 === 0) {
+      para.classList.add("scrollingBG");
+    } else {
+      para.classList.add("scrollingBG-alt");
+    }
+
+    const scrollCont = document.getElementsByClassName("scrollCont");
+
+    for (let j = 0; j < scrollCont.length; j++) {
+      scrollCont[j].appendChild(para);
+    }
+  }
+}
+
+//console.log("main.js loaded");

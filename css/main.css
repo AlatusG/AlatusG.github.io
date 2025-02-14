@@ -4,14 +4,21 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   /*
-  outline: 1px solid pink;
 	*/
+  outline: 1px solid pink;
   color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .home_body {
   background: repeating-linear-gradient(
-    45deg,
+    60deg,
     #1a1a1a 0px,
     #1a1a1a 5px,
     #2d2d2d 5px,
@@ -19,7 +26,9 @@
   );
   display: flex;
   flex-flow: column nowrap;
+
   align-items: center;
+
   height: 100vh;
   min-height: 720px;
 
@@ -319,6 +328,94 @@
   animation: slideIn 0.25s ease-out forwards;
 }
 
+.skills_info {
+  position: relative;
+
+  width: 400pt;
+  height: 400pt;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn 0.25s ease-out forwards;
+}
+
+.skills_info::before {
+  content: "";
+
+  position: absolute;
+  top: 3pt;
+  left: 3pt;
+  z-index: 2;
+
+  width: 394pt;
+  height: 394pt;
+
+  background-color: #2f2f2f;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.skills_info::after {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  z-index: 0;
+  content: "";
+  width: 400pt;
+  height: 400pt;
+  background-color: black;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.skillImg {
+  height: 100pt;
+  width: 100pt;
+
+  position: absolute;
+  z-index: 1;
+
+  background-color: black;
+  border-radius: 75pt;
+
+  transform-origin: 0% 100%;
+}
+
+.skillImg:nth-child(1) {
+  top: calc(-1 * 100pt / 2);
+  left: calc(100pt / 2);
+}
+
+.skillImg:nth-child(2) {
+  top: calc(400pt / 2 - 100pt / 2);
+  left: calc(-1 * (100pt / 2));
+}
+
+.skillImg:nth-child(3) {
+  top: calc(400pt - 100pt / 2);
+  left: calc(100pt / 2);
+}
+
+.skillImg:nth-child(4) {
+  top: calc(400pt - 100pt / 2);
+  left: calc(400pt - 100pt * 1.5);
+}
+
+.skillImg:nth-child(5) {
+  top: calc(400pt / 2 - 100pt / 2);
+  left: calc(400pt - 100pt / 2);
+}
+
+.skillImg:nth-child(6) {
+  top: calc(-1 * 100pt / 2);
+  left: calc(400pt - 100pt * 1.5);
+}
+
+.skillImg:nth-child(7) {
+  z-index: 3;
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -393,10 +490,6 @@
   text-decoration: underline;
 }
 
-.hidden {
-  display: none;
-}
-
 /* SITE CONTENT STYLES END */
 
 /* SITE FOOTER STYLES START */
@@ -411,3 +504,71 @@ footer {
   background-color: black;
 }
 /* SITE FOOTER STYLES END */
+
+/* CHARACTER BACKGROUND SCROLL START */
+
+:root {
+  --bgHeight: 100px;
+}
+
+@keyframes bgScroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@keyframes bgScroll-alt {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.scrollBG {
+  width: 1000vw;
+  height: var(--bgHeight);
+
+  display: block;
+  position: relative;
+  transform-origin: 0% 100%;
+  top: calc(var(--bgHeight) * -1);
+  left: calc(var(--bgHeight) * -1);
+  rotate: 60deg;
+  margin-bottom: var(--bgHeight);
+
+  background-size: auto 100px;
+  background-repeat: repeat;
+  background-image: url("../assests/img/filmstrip-png-33816.png");
+
+  animation-duration: 720s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.scrollingBG {
+  background-color: grey;
+  animation-name: bgScroll;
+}
+
+.scrollingBG-alt {
+  background-color: cyan;
+  animation-name: bgScroll-alt;
+}
+
+.scrollCont {
+  overflow: hidden;
+  width: 1000vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -99;
+}
+
+/* CHARACTER BACKGROUND SCROLL END*/
